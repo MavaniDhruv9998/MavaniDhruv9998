@@ -161,26 +161,33 @@ def create_exambro():
 
 # ─── WAVE DIVIDER (animated SVG) ───
 def create_wave_divider():
-    svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 40" width="100%">
+    svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 30" width="100%">
   <defs>
     <linearGradient id="rg" x1="0%" x2="100%">
-      <stop offset="0%" stop-color="#060608"/>
-      <stop offset="30%" stop-color="#DC2626"/>
+      <stop offset="0%" stop-color="#991B1B" stop-opacity="0.3"/>
+      <stop offset="20%" stop-color="#DC2626"/>
       <stop offset="50%" stop-color="#F87171"/>
-      <stop offset="70%" stop-color="#DC2626"/>
-      <stop offset="100%" stop-color="#060608"/>
+      <stop offset="80%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#991B1B" stop-opacity="0.3"/>
     </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1000" height="40" fill="#060608"/>
-  <line x1="0" y1="20" x2="1000" y2="20" stroke="url(#rg)" stroke-width="1.5" stroke-opacity="0.5"/>
-  <circle r="4" fill="#DC2626" opacity="0.9">
-    <animateMotion dur="3s" repeatCount="indefinite" path="M0,20 Q250,5 500,20 Q750,35 1000,20"/>
+  <!-- Main visible straight red line -->
+  <line x1="0" y1="15" x2="1000" y2="15" stroke="url(#rg)" stroke-width="2"/>
+  <!-- Animated glowing dot traveling in wave motion -->
+  <circle r="5" fill="#F87171" filter="url(#glow)">
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M0,15 Q250,4 500,15 Q750,26 1000,15"/>
   </circle>
-  <circle r="2" fill="#F87171" opacity="0.6">
-    <animateMotion dur="3s" repeatCount="indefinite" path="M1000,20 Q750,5 500,20 Q250,35 0,20"/>
+  <!-- Second dot going opposite direction -->
+  <circle r="3" fill="#DC2626" opacity="0.8" filter="url(#glow)">
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M1000,15 Q750,4 500,15 Q250,26 0,15"/>
   </circle>
-  <circle r="6" fill="#DC2626" opacity="0.15">
-    <animateMotion dur="3s" repeatCount="indefinite" path="M0,20 Q250,5 500,20 Q750,35 1000,20"/>
+  <!-- Trailing glow for first dot -->
+  <circle r="10" fill="#DC2626" opacity="0.2">
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M0,15 Q250,4 500,15 Q750,26 1000,15"/>
   </circle>
 </svg>'''
     with open('assets/wave_divider.svg', 'w', encoding='utf-8') as f:
