@@ -159,40 +159,36 @@ def create_exambro():
     print("Created exambro_card.png")
 
 
-# ─── WAVE DIVIDER (animated SVG) ───
+# ─── WAVE DIVIDER (PNG — GitHub strips SVG animations) ───
 def create_wave_divider():
-    svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 30" width="100%">
-  <defs>
-    <linearGradient id="rg" x1="0%" x2="100%">
-      <stop offset="0%" stop-color="#991B1B" stop-opacity="0.3"/>
-      <stop offset="20%" stop-color="#DC2626"/>
-      <stop offset="50%" stop-color="#F87171"/>
-      <stop offset="80%" stop-color="#DC2626"/>
-      <stop offset="100%" stop-color="#991B1B" stop-opacity="0.3"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
-  <!-- Main visible straight red line -->
-  <line x1="0" y1="15" x2="1000" y2="15" stroke="url(#rg)" stroke-width="2"/>
-  <!-- Animated glowing dot traveling in wave motion -->
-  <circle r="5" fill="#F87171" filter="url(#glow)">
-    <animateMotion dur="2.5s" repeatCount="indefinite" path="M0,15 Q250,4 500,15 Q750,26 1000,15"/>
-  </circle>
-  <!-- Second dot going opposite direction -->
-  <circle r="3" fill="#DC2626" opacity="0.8" filter="url(#glow)">
-    <animateMotion dur="2.5s" repeatCount="indefinite" path="M1000,15 Q750,4 500,15 Q250,26 0,15"/>
-  </circle>
-  <!-- Trailing glow for first dot -->
-  <circle r="10" fill="#DC2626" opacity="0.2">
-    <animateMotion dur="2.5s" repeatCount="indefinite" path="M0,15 Q250,4 500,15 Q750,26 1000,15"/>
-  </circle>
-</svg>'''
-    with open('assets/wave_divider.svg', 'w', encoding='utf-8') as f:
-        f.write(svg)
-    print("Created wave_divider.svg")
+    import math
+    W, H = 1200, 40
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+
+    # Draw a sine wave red line across full width
+    points = []
+    for x in range(W):
+        y = int(H // 2 + 8 * math.sin(x * 2 * math.pi / 150))
+        points.append((x, y))
+
+    # Draw the wave line thick with glow effect
+    # Outer glow
+    for x in range(len(points) - 1):
+        draw.line([points[x], points[x+1]], fill=(220, 38, 38, 40), width=8)
+    # Mid glow
+    for x in range(len(points) - 1):
+        draw.line([points[x], points[x+1]], fill=(220, 38, 38, 80), width=4)
+    # Core line
+    for x in range(len(points) - 1):
+        t = x / W
+        r = int(180 + 68 * t)  # 180 -> 248
+        g = int(20 + 93 * t)   # 20 -> 113
+        b = int(20 + 93 * t)   # 20 -> 113
+        draw.line([points[x], points[x+1]], fill=(r, g, b, 255), width=2)
+
+    img.save("assets/wave_divider.png", "PNG")
+    print("Created wave_divider.png")
 
 
 # ─── QUOTE CARD ───
