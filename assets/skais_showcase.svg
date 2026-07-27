@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 270" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skais-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="skais-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#4FACFE" />
+    </linearGradient>
+    <linearGradient id="badge-skais" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(0, 242, 254, 0.2)" />
+      <stop offset="100%" stop-color="rgba(79, 172, 254, 0.2)" />
+    </linearGradient>
+    <style>
+      .proj-title { font-family: 'Inter', system-ui, sans-serif; font-weight: 800; font-size: 22px; fill: #FFFFFF; }
+      .proj-tagline { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 13px; fill: #00F2FE; }
+      .flow-box-text { font-family: 'Fira Code', monospace; font-size: 11px; font-weight: 600; fill: #E2E8F0; }
+      .flow-sub { font-family: 'Inter', sans-serif; font-size: 10px; fill: #94A3B8; }
+      .feat-bullet { font-family: 'Inter', sans-serif; font-size: 12px; fill: #CBD5E1; }
+      .tag-text { font-family: 'Fira Code', monospace; font-size: 10px; font-weight: 600; fill: #38BDF8; }
+    </style>
+  </defs>
+
+  <rect x="2" y="2" width="846" height="266" rx="14" fill="url(#skais-bg)" stroke="url(#skais-border)" stroke-width="1.5" />
+
+  <g transform="translate(24, 20)">
+    <text x="0" y="22" class="proj-title">🎙️ SKAIS — Autonomous Restaurant Voice AI Agent</text>
+    <rect x="520" y="4" width="120" height="24" rx="12" fill="url(#badge-skais)" stroke="#00F2FE" stroke-width="1" />
+    <text x="532" y="20" class="proj-tagline">PRODUCTION AI</text>
+  </g>
+
+  <g transform="translate(24, 60)">
+    <rect x="0" y="0" width="802" height="76" rx="10" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+
+    <g transform="translate(16, 14)">
+      <rect x="0" y="0" width="120" height="48" rx="6" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+      <text x="60" y="22" text-anchor="middle" class="flow-box-text">📞 Customer Call</text>
+      <text x="60" y="38" text-anchor="middle" class="flow-sub">Twilio Inbound</text>
+    </g>
+
+    <path d="M 142 38 L 168 38" stroke="#00F2FE" stroke-width="1.5" stroke-dasharray="4,2" />
+    
+    <g transform="translate(174, 14)">
+      <rect x="0" y="0" width="140" height="48" rx="6" fill="#1E293B" stroke="#A855F7" stroke-width="1"/>
+      <text x="70" y="22" text-anchor="middle" class="flow-box-text">🤖 Retell AI SDK</text>
+      <text x="70" y="38" text-anchor="middle" class="flow-sub">Voice &amp; Prompt Logic</text>
+    </g>
+
+    <path d="M 320 38 L 346 38" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="4,2" />
+
+    <g transform="translate(352, 14)">
+      <rect x="0" y="0" width="140" height="48" rx="6" fill="#1E293B" stroke="#EC4899" stroke-width="1"/>
+      <text x="70" y="22" text-anchor="middle" class="flow-box-text">📚 RAG Engine</text>
+      <text x="70" y="38" text-anchor="middle" class="flow-sub">FAISS / Vector Search</text>
+    </g>
+
+    <path d="M 498 38 L 524 38" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="4,2" />
+
+    <g transform="translate(530, 14)">
+      <rect x="0" y="0" width="130" height="48" rx="6" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+      <text x="65" y="22" text-anchor="middle" class="flow-box-text">⚡ FastAPI</text>
+      <text x="65" y="38" text-anchor="middle" class="flow-sub">Supabase Backend</text>
+    </g>
+
+    <path d="M 666 38 L 690 38" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4,2" />
+
+    <g transform="translate(696, 14)">
+      <rect x="0" y="0" width="90" height="48" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+      <text x="45" y="22" text-anchor="middle" class="flow-box-text">📱 SMS / POS</text>
+      <text x="45" y="38" text-anchor="middle" class="flow-sub">Order Placed</text>
+    </g>
+  </g>
+
+  <g transform="translate(24, 150)">
+    <text x="0" y="16" class="feat-bullet">• <tspan font-weight="700" fill="#FFFFFF">Zero Hallucination Guardrails:</tspan> Fine-tuned prompt logic &amp; strict vector RAG base for live call accuracy.</text>
+    <text x="0" y="38" class="feat-bullet">• <tspan font-weight="700" fill="#FFFFFF">Real-Time Operations:</tspan> Dynamic price calculation, reservation availability checking &amp; automated Twilio SMS confirmations.</text>
+    <text x="0" y="60" class="feat-bullet">• <tspan font-weight="700" fill="#FFFFFF">SaaS Control Center:</tspan> Custom Next.js admin portal for restaurant owners + integrated LangChain customer support chatbot.</text>
+  </g>
+
+  <g transform="translate(24, 230)">
+    <rect x="0" y="0" width="85" height="22" rx="4" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+    <text x="42" y="15" text-anchor="middle" class="tag-text">Retell AI SDK</text>
+
+    <rect x="95" y="0" width="65" height="22" rx="4" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+    <text x="127" y="15" text-anchor="middle" class="tag-text">FastAPI</text>
+
+    <rect x="170" y="0" width="70" height="22" rx="4" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+    <text x="205" y="15" text-anchor="middle" class="tag-text">Next.js</text>
+
+    <rect x="250" y="0" width="75" height="22" rx="4" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+    <text x="287" y="15" text-anchor="middle" class="tag-text">Supabase</text>
+
+    <rect x="335" y="0" width="80" height="22" rx="4" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+    <text x="375" y="15" text-anchor="middle" class="tag-text">Gemini AI</text>
+
+    <rect x="425" y="0" width="85" height="22" rx="4" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+    <text x="467" y="15" text-anchor="middle" class="tag-text">LangChain</text>
+
+    <rect x="520" y="0" width="80" height="22" rx="4" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+    <text x="560" y="15" text-anchor="middle" class="tag-text">Twilio SDK</text>
+
+    <rect x="610" y="0" width="85" height="22" rx="4" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+    <text x="652" y="15" text-anchor="middle" class="tag-text">Square POS</text>
+  </g>
+</svg>
