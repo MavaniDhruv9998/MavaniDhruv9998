@@ -9,9 +9,11 @@
   <a href="https://github.com/MavaniDhruv9998"><img src="https://img.shields.io/badge/-GitHub-1a1a1a?style=for-the-badge&logo=github&logoColor=DC2626" /></a>
 </p>
 
----
+<img src="assets/wave_divider.png" width="100%" />
 
-## ◈ About
+<p align="center">
+  <img src="assets/about_section.png" alt="About" width="100%" />
+</p>
 
 > AI Developer with **7 months of professional experience** building real-world AI solutions across two major production projects — **ExamBro** and **SKAIS** — spanning LLM applications, RAG pipelines, and conversational AI voice agents.
 
@@ -21,9 +23,11 @@
 - ⚡ Building **Voice AI Agents** · **RAG Pipelines** · **OCR Engines** · **Multi-Agent Workflows**
 - 📍 Bhavnagar, Gujarat, India
 
----
+<img src="assets/wave_divider.png" width="100%" />
 
-## ◈ Tech Stack
+<p align="center">
+  <img src="assets/techstack_section.png" alt="Tech Stack" width="100%" />
+</p>
 
 **🧠 Generative AI & LLMs**
 
@@ -53,9 +57,11 @@
 
 ![Mistral OCR](https://img.shields.io/badge/Mistral_OCR-DC2626?style=flat-square&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-1a1a1a?style=flat-square&logo=pytorch&logoColor=DC2626) ![OpenCV](https://img.shields.io/badge/OpenCV-1a1a1a?style=flat-square&logo=opencv&logoColor=DC2626) ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1a1a1a?style=flat-square&logo=scikit-learn&logoColor=DC2626) ![PyMuPDF](https://img.shields.io/badge/PyMuPDF-1a1a1a?style=flat-square&logoColor=DC2626) ![Cursor AI](https://img.shields.io/badge/Cursor_AI-1a1a1a?style=flat-square&logoColor=DC2626)
 
----
+<img src="assets/wave_divider.png" width="100%" />
 
-## ◈ Projects
+<p align="center">
+  <img src="assets/projects_section.png" alt="Projects" width="100%" />
+</p>
 
 <p align="center">
   <img src="assets/skais_card.png" alt="SKAIS" width="100%" />
@@ -91,9 +97,11 @@
 
 `Python` `Django` `FastAPI` `PyMuPDF` `Mistral OCR` `OpenCV` `Gemini AI` `Supabase`
 
----
+<img src="assets/wave_divider.png" width="100%" />
 
-## ◈ Experience
+<p align="center">
+  <img src="assets/experience_section.png" alt="Experience" width="100%" />
+</p>
 
 > 🔴 **AI Developer** — *Cloudus Infotech, Surat, Gujarat*
 > 
@@ -107,16 +115,20 @@
 - ☁️ **Deployed & hosted** production backend on **AWS**, resolving environment and configuration issues
 - 🔄 Used **Git/GitHub** throughout — worked across the full lifecycle: requirement analysis → system design → implementation → testing → deployment
 
----
+<img src="assets/wave_divider.png" width="100%" />
 
-## ◈ Education
+<p align="center">
+  <img src="assets/education_section.png" alt="Education" width="100%" />
+</p>
 
 - 🎓 **M.Sc. Artificial Intelligence** — Maharaja Krishnakumarsinhji Bhavnagar University (MKBU) · *2025 – Present*
 - 📘 **Bachelor of Computer Applications (BCA)** — Maharaja Krishnakumarsinhji Bhavnagar University (MKBU) · *2022 – 2025*
 
----
+<img src="assets/wave_divider.png" width="100%" />
 
-## ◈ Connect
+<p align="center">
+  <img src="assets/connect_section.png" alt="Connect" width="100%" />
+</p>
 
 <p align="center">
   <a href="https://linkedin.com/in/dhruv-mavani-b186b6283"><img src="https://img.shields.io/badge/LinkedIn-Connect-DC2626?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
@@ -124,7 +136,7 @@
   <a href="https://github.com/MavaniDhruv9998"><img src="https://img.shields.io/badge/GitHub-Follow-DC2626?style=for-the-badge&logo=github&logoColor=white" /></a>
 </p>
 
----
+<img src="assets/wave_divider.png" width="100%" />
 
 <p align="center">
   <img src="assets/footer_banner.png" alt="Let's Build Something" width="100%" />
