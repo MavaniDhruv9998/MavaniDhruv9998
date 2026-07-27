@@ -1,10 +1,8 @@
-<div align="center">
-  <!-- Title Image Header Banner -->
-  <img src="./assets/header_banner.svg" alt="Dhruv Mavani - AI Developer Banner" width="100%" />
+<p align="center">
+  <img src="assets/header_banner.png" alt="Dhruv Mavani - AI Developer Banner" width="100%" />
+</p>
 
-  <br/><br/>
-
-  <!-- Quick Social & Contact Badges -->
+<p align="center">
   <a href="https://linkedin.com/in/dhruv-mavani-b186b6283/">
     <img src="https://img.shields.io/badge/LinkedIn-Dhruv_Mavani-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
@@ -18,42 +16,28 @@
     <img src="https://img.shields.io/badge/GitHub-MavaniDhruv9998-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
   <img src="https://img.shields.io/badge/Location-Bhavnagar,_Gujarat,_India-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
+</p>
 
-  <br/><br/>
-</div>
-
-<img src="./assets/divider.svg" width="100%" />
+<p align="center">
+  <img src="assets/divider.png" width="100%" alt="Divider" />
+</p>
 
 ## ⚡ Professional Overview
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <h3>👨‍💻 About Me</h3>
-      <p>I am a dedicated <b>AI Developer</b> with <b>7 months of professional experience</b> engineering production-grade AI applications. Currently pursuing an <b>M.Sc. in Artificial Intelligence</b> (following my BCA degree), I specialize in architecting end-to-end <b>LLM applications, RAG pipelines, Conversational Voice AI agents</b>, and <b>OCR document extraction engines</b>.</p>
-      <p>My work centers around solving high-impact business problems—from reducing operational costs for enterprises to automating complex document workflows.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🎯 Core Focus & Credentials</h3>
-      <ul>
-        <li>💼 <b>AI Developer</b> at <i>Cloudus Infotech</i> (7 Months Professional Experience)</li>
-        <li>🎓 <b>M.Sc. in Artificial Intelligence</b> (2025 – Present)</li>
-        <li>🎓 <b>Bachelor of Computer Applications (BCA)</b> (2022 – 2025)</li>
-        <li>🎙️ <b>Voice AI & RAG</b>: Real-time telephone agents with Retell AI & Twilio</li>
-        <li>📄 <b>OCR & Vision</b>: Automated PDF question/diagram extraction</li>
-        <li>☁️ <b>Cloud & Deployment</b>: Docker, AWS, FastAPI, Django, Supabase</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+I am a dedicated **AI Developer** with **7 months of professional experience** engineering production-grade AI applications. Currently pursuing an **M.Sc. in Artificial Intelligence** (following my BCA degree), I specialize in architecting end-to-end **LLM applications, RAG pipelines, Conversational Voice AI agents**, and **OCR document extraction engines**.
 
-<br/>
+### 🎯 Core Focus & Credentials
+- 💼 **AI Developer** at *Cloudus Infotech* (7 Months Professional Experience)
+- 🎓 **M.Sc. in Artificial Intelligence** (2025 – Present) | **BCA Graduate** (2022 – 2025)
+- 🎙️ **Voice AI & RAG**: Real-time telephone agents with Retell AI SDK & Twilio
+- 📄 **OCR & Computer Vision**: Automated PDF question & diagram extraction
+- ☁️ **Cloud & Microservices**: Docker, AWS, FastAPI, Django, Supabase
 
-<img src="./assets/divider.svg" width="100%" />
+<p align="center">
+  <img src="assets/divider.png" width="100%" alt="Divider" />
+</p>
 
 ## 🛠️ Technical Arsenal & Core Skills
-
-<div align="center">
 
 ### 🤖 AI, LLMs & Agents
 ![Generative AI](https://img.shields.io/badge/Generative_AI-Prompt_Engineering-8A2BE2?style=flat-square&logo=openai&logoColor=white)
@@ -94,20 +78,16 @@
 ![Google Antigravity](https://img.shields.io/badge/Google_Antigravity-4285F4?style=flat-square&logo=google&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
 
-</div>
-
-<br/>
-
-<img src="./assets/divider.svg" width="100%" />
+<p align="center">
+  <img src="assets/divider.png" width="100%" alt="Divider" />
+</p>
 
 ## 🚀 Key Production Projects
 
 ### 1️⃣ SKAIS — AI-Powered Restaurant Order Management System
-<div align="center">
-  <img src="./assets/skais_banner.svg" alt="SKAIS Project Banner" width="100%" />
-</div>
-
-<br/>
+<p align="center">
+  <img src="assets/skais_banner.png" alt="SKAIS Project Banner" width="100%" />
+</p>
 
 > **Problem**: Restaurants relied heavily on staff to answer phone calls for orders and reservations, leading to missed calls during peak hours and high recurring staffing costs.
 
@@ -121,11 +101,9 @@
 ---
 
 ### 2️⃣ ExamBro — Question Extraction & Exam Management System
-<div align="center">
-  <img src="./assets/exambro_banner.svg" alt="ExamBro Project Banner" width="100%" />
-</div>
-
-<br/>
+<p align="center">
+  <img src="assets/exambro_banner.png" alt="ExamBro Project Banner" width="100%" />
+</p>
 
 > **Problem**: Teachers spent hours manually typing exam questions, options, answers, and copying complex diagrams into student portals—a slow and error-prone process.
 
@@ -136,9 +114,9 @@
 
 **Tech Stack**: `Python` • `Django` • `FastAPI` • `Mistral OCR` • `PyMuPDF` • `OpenCV` • `Gemini AI` • `LangChain` • `Supabase` • `Docker`
 
-<br/>
-
-<img src="./assets/divider.svg" width="100%" />
+<p align="center">
+  <img src="assets/divider.png" width="100%" alt="Divider" />
+</p>
 
 ## 💼 Professional Experience
 
@@ -151,9 +129,9 @@
 - 👁️ **Document OCR & Vision**: Built high-precision PDF parsing engines combining Mistral OCR, PyMuPDF, and Gemini AI for automated question and diagram extraction.
 - ☁️ **AWS & Docker Infrastructure**: Dockerized production microservices and deployed full backend stacks to AWS, managing environment configs, security, and CI/CD pipelines.
 
-<br/>
-
-<img src="./assets/divider.svg" width="100%" />
+<p align="center">
+  <img src="assets/divider.png" width="100%" alt="Divider" />
+</p>
 
 ## 🎓 Education
 
@@ -162,15 +140,15 @@
 | **M.Sc.** | **Artificial Intelligence** | Maharaja Krishnakumarsinhji Bhavnagar University (MKBU) | **2025 – Present** |
 | **BCA** | **Bachelor of Computer Applications** | Maharaja Krishnakumarsinhji Bhavnagar University (MKBU) | **2022 – 2025** |
 
-<br/>
-
-<img src="./assets/divider.svg" width="100%" />
+<p align="center">
+  <img src="assets/divider.png" width="100%" alt="Divider" />
+</p>
 
 ## 📫 Connect With Me
 
-<div align="center">
-  <p>I am always excited to connect with fellow AI engineers, tech leaders, and collaborators!</p>
-
+<p align="center">
+  I am always excited to connect with fellow AI engineers, tech leaders, and collaborators!
+  <br/><br/>
   <a href="https://linkedin.com/in/dhruv-mavani-b186b6283/">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
@@ -180,16 +158,10 @@
   <a href="https://github.com/MavaniDhruv9998">
     <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
-</div>
+</p>
 
-<br/>
-
----
-
-<div align="center">
-  <img src="./assets/quote_card.svg" alt="Samuel Beckett Quote Card" width="100%" />
-</div>
-
-<br/>
+<p align="center">
+  <img src="assets/quote_card.png" alt="Samuel Beckett Quote Card" width="100%" />
+</p>
 
 Samuel Beckett: "Ever tried. Ever failed. No matter. Try again. Fail again. Fail better"
