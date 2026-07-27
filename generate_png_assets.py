@@ -191,30 +191,109 @@ def create_wave_divider():
     print("Created wave_divider.png")
 
 
-# ─── QUOTE CARD ───
-def create_quote():
-    W, H = 1000, 100
-    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+# ─── FOOTER BANNER WITH EFFECTS ───
+def create_footer_banner():
+    import math
+    W, H = 1200, 280
+    img = Image.new("RGBA", (W, H), (*BG, 255))
     draw = ImageDraw.Draw(img)
 
-    draw.rounded_rectangle([0, 0, W-1, H-1], radius=14, fill=(10, 10, 14, 250), outline=(*RED_DARK, 160), width=2)
+    # Background gradient
+    for y in range(H):
+        t = y / H
+        c = lerp(BG, (12, 5, 8), t)
+        draw.line([(0, y), (W, y)], fill=(*c, 255))
 
-    # Left red accent bar
-    for y in range(15, H-15):
-        t = (y - 15) / (H - 30)
-        c = lerp(RED, RED_DARK, t)
-        draw.line([(10, y), (14, y)], fill=(*c, 255))
+    # Red glow orbs
+    orb = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    od = ImageDraw.Draw(orb)
+    od.ellipse([350, 30, 850, 280], fill=(*RED_DARK, 45))
+    od.ellipse([100, 80, 500, 300], fill=(*RED, 20))
+    od.ellipse([700, 50, 1100, 280], fill=(*RED, 20))
+    orb = orb.filter(ImageFilter.GaussianBlur(60))
+    img = Image.alpha_composite(img, orb)
+    draw = ImageDraw.Draw(img)
 
-    f_q = get_font(16, bold=True)
-    f_a = get_font(11, bold=True)
+    # Radiating lines from center bottom
+    cx, cy = W // 2, H + 40
+    for angle_deg in range(-80, 81, 8):
+        angle = math.radians(angle_deg)
+        x2 = cx + int(500 * math.sin(angle))
+        y2 = cy - int(500 * math.cos(angle))
+        # Fade based on distance from center
+        fade = int(60 * (1 - abs(angle_deg) / 80))
+        draw.line([(cx, cy), (x2, y2)], fill=(*RED_DARK, fade), width=1)
 
-    draw.text((30, 25), '"Ever tried. Ever failed. No matter. Try again. Fail again. Fail better"', font=f_q, fill=(245, 245, 245, 240))
-    draw.rounded_rectangle([30, 60, 170, 82], radius=11, fill=(25, 10, 10, 220), outline=(*RED_DARK, 180), width=1)
-    draw.text((44, 64), "-- Samuel Beckett", font=f_a, fill=(*RED_SOFT, 255))
+    # Top red line
+    draw.line([(0, 0), (W, 0)], fill=(*RED, 255), width=3)
+    # Bottom red line
+    draw.line([(0, H-3), (W, H-3)], fill=(*RED, 255), width=3)
+
+    # Wave pattern across the middle
+    points = []
+    for x in range(W):
+        y = int(80 + 12 * math.sin(x * 2 * math.pi / 200))
+        points.append((x, y))
+    for i in range(len(points) - 1):
+        draw.line([points[i], points[i+1]], fill=(*RED, 35), width=6)
+    for i in range(len(points) - 1):
+        draw.line([points[i], points[i+1]], fill=(*RED, 70), width=2)
+
+    # Second wave lower
+    points2 = []
+    for x in range(W):
+        y = int(95 + 10 * math.sin(x * 2 * math.pi / 160 + 1.5))
+        points2.append((x, y))
+    for i in range(len(points2) - 1):
+        draw.line([points2[i], points2[i+1]], fill=(*RED_DARK, 50), width=1)
+
+    # Quote text — centered
+    font_quote = get_font(22, bold=True)
+    font_author = get_font(14, bold=True)
+
+    quote = '"Ever tried. Ever failed. No matter.'
+    quote2 = 'Try again. Fail again. Fail better"'
+
+    # Glow behind text
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    gd = ImageDraw.Draw(glow)
+    bbox1 = gd.textbbox((0, 0), quote, font=font_quote)
+    tw1 = bbox1[2] - bbox1[0]
+    bbox2 = gd.textbbox((0, 0), quote2, font=font_quote)
+    tw2 = bbox2[2] - bbox2[0]
+    qx1 = (W - tw1) // 2
+    qx2 = (W - tw2) // 2
+    qy = 130
+    gd.text((qx1, qy), quote, font=font_quote, fill=(*RED, 40))
+    gd.text((qx2, qy + 35), quote2, font=font_quote, fill=(*RED, 40))
+    glow = glow.filter(ImageFilter.GaussianBlur(12))
+    img = Image.alpha_composite(img, glow)
+    draw = ImageDraw.Draw(img)
+
+    # Actual quote text
+    draw.text((qx1, qy), quote, font=font_quote, fill=(245, 245, 245, 240))
+    draw.text((qx2, qy + 35), quote2, font=font_quote, fill=(245, 245, 245, 240))
+
+    # Author
+    author = "— Samuel Beckett"
+    abbox = draw.textbbox((0, 0), author, font=font_author)
+    atw = abbox[2] - abbox[0]
+    ax = (W - atw) // 2
+    draw.rounded_rectangle([ax - 15, qy + 80, ax + atw + 15, qy + 104], radius=12, fill=(25, 10, 10, 220), outline=(*RED_DARK, 180), width=1)
+    draw.text((ax, qy + 83), author, font=font_author, fill=(*RED_SOFT, 255))
+
+    # Floating particles
+    import random
+    random.seed(99)
+    for _ in range(30):
+        px, py = random.randint(0, W), random.randint(0, H)
+        pr = random.randint(1, 2)
+        pa = random.randint(30, 80)
+        draw.ellipse([px-pr, py-pr, px+pr, py+pr], fill=(*RED, pa))
 
     img = img.convert("RGB")
-    img.save("assets/quote_card.png", "PNG", quality=95)
-    print("Created quote_card.png")
+    img.save("assets/footer_banner.png", "PNG", quality=95)
+    print("Created footer_banner.png")
 
 
 if __name__ == '__main__':
@@ -223,5 +302,6 @@ if __name__ == '__main__':
     create_skais()
     create_exambro()
     create_wave_divider()
-    create_quote()
+    create_footer_banner()
     print("Done")
+

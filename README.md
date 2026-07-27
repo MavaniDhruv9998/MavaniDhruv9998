@@ -103,5 +103,5 @@
 <img src="assets/wave_divider.png" width="100%" />
 
 <p align="center">
-  <img src="assets/quote_card.png" alt="Quote" width="100%" />
+  <img src="assets/footer_banner.png" alt="Footer" width="100%" />
 </p>
