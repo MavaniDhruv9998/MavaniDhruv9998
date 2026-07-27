@@ -191,105 +191,76 @@ def create_wave_divider():
     print("Created wave_divider.png")
 
 
-# ─── FOOTER BANNER WITH EFFECTS ───
+# ─── FOOTER BANNER — same style as project banners ───
 def create_footer_banner():
-    import math
-    W, H = 1200, 280
+    """Same style as SKAIS/EXAMBRO banners: text + icon, clean gradient."""
+    W, H = 1000, 200
     img = Image.new("RGBA", (W, H), (*BG, 255))
     draw = ImageDraw.Draw(img)
 
-    # Background gradient
-    for y in range(H):
-        t = y / H
-        c = lerp(BG, (12, 5, 8), t)
-        draw.line([(0, y), (W, y)], fill=(*c, 255))
-
-    # Red glow orbs
+    # Smooth red glow center — same as make_banner
     orb = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     od = ImageDraw.Draw(orb)
-    od.ellipse([350, 30, 850, 280], fill=(*RED_DARK, 45))
-    od.ellipse([100, 80, 500, 300], fill=(*RED, 20))
-    od.ellipse([700, 50, 1100, 280], fill=(*RED, 20))
+    od.ellipse([W//4, 10, W*3//4, H-10], fill=(*RED_DARK, 35))
     orb = orb.filter(ImageFilter.GaussianBlur(60))
     img = Image.alpha_composite(img, orb)
     draw = ImageDraw.Draw(img)
 
-    # Radiating lines from center bottom
-    cx, cy = W // 2, H + 40
-    for angle_deg in range(-80, 81, 8):
-        angle = math.radians(angle_deg)
-        x2 = cx + int(500 * math.sin(angle))
-        y2 = cy - int(500 * math.cos(angle))
-        # Fade based on distance from center
-        fade = int(60 * (1 - abs(angle_deg) / 80))
-        draw.line([(cx, cy), (x2, y2)], fill=(*RED_DARK, fade), width=1)
-
-    # Top red line
+    # Top & bottom red lines
     draw.line([(0, 0), (W, 0)], fill=(*RED, 255), width=3)
-    # Bottom red line
     draw.line([(0, H-3), (W, H-3)], fill=(*RED, 255), width=3)
 
-    # Wave pattern across the middle
-    points = []
-    for x in range(W):
-        y = int(80 + 12 * math.sin(x * 2 * math.pi / 200))
-        points.append((x, y))
-    for i in range(len(points) - 1):
-        draw.line([points[i], points[i+1]], fill=(*RED, 35), width=6)
-    for i in range(len(points) - 1):
-        draw.line([points[i], points[i+1]], fill=(*RED, 70), width=2)
+    # Quote text — centered, two lines
+    font_quote = get_font(28, bold=True)
+    font_author = get_font(13, bold=True)
 
-    # Second wave lower
-    points2 = []
-    for x in range(W):
-        y = int(95 + 10 * math.sin(x * 2 * math.pi / 160 + 1.5))
-        points2.append((x, y))
-    for i in range(len(points2) - 1):
-        draw.line([points2[i], points2[i+1]], fill=(*RED_DARK, 50), width=1)
-
-    # Quote text — centered
-    font_quote = get_font(22, bold=True)
-    font_author = get_font(14, bold=True)
-
-    quote = '"Ever tried. Ever failed. No matter.'
-    quote2 = 'Try again. Fail again. Fail better"'
+    line1 = '"Ever tried. Ever failed. No matter.'
+    line2 = 'Try again. Fail again. Fail better"'
 
     # Glow behind text
     glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     gd = ImageDraw.Draw(glow)
-    bbox1 = gd.textbbox((0, 0), quote, font=font_quote)
-    tw1 = bbox1[2] - bbox1[0]
-    bbox2 = gd.textbbox((0, 0), quote2, font=font_quote)
-    tw2 = bbox2[2] - bbox2[0]
-    qx1 = (W - tw1) // 2
-    qx2 = (W - tw2) // 2
-    qy = 130
-    gd.text((qx1, qy), quote, font=font_quote, fill=(*RED, 40))
-    gd.text((qx2, qy + 35), quote2, font=font_quote, fill=(*RED, 40))
-    glow = glow.filter(ImageFilter.GaussianBlur(12))
+    b1 = gd.textbbox((0, 0), line1, font=font_quote)
+    b2 = gd.textbbox((0, 0), line2, font=font_quote)
+    x1 = (W - 80 - (b1[2] - b1[0])) // 2
+    x2 = (W - 80 - (b2[2] - b2[0])) // 2
+    y1, y2 = 50, 90
+    gd.text((x1, y1), line1, font=font_quote, fill=(*RED, 45))
+    gd.text((x2, y2), line2, font=font_quote, fill=(*RED, 45))
+    glow = glow.filter(ImageFilter.GaussianBlur(14))
     img = Image.alpha_composite(img, glow)
     draw = ImageDraw.Draw(img)
 
-    # Actual quote text
-    draw.text((qx1, qy), quote, font=font_quote, fill=(245, 245, 245, 240))
-    draw.text((qx2, qy + 35), quote2, font=font_quote, fill=(245, 245, 245, 240))
+    # Quote text gradient
+    for line, lx, ly in [(line1, x1, y1), (line2, x2, y2)]:
+        cx = lx
+        for i, ch in enumerate(line):
+            t = i / max(1, len(line) - 1)
+            c = lerp(RED, RED_SOFT, t)
+            draw.text((cx, ly), ch, font=font_quote, fill=(*c, 255))
+            cx += draw.textlength(ch, font=font_quote)
 
-    # Author
+    # Author pill badge
     author = "— Samuel Beckett"
-    abbox = draw.textbbox((0, 0), author, font=font_author)
-    atw = abbox[2] - abbox[0]
-    ax = (W - atw) // 2
-    draw.rounded_rectangle([ax - 15, qy + 80, ax + atw + 15, qy + 104], radius=12, fill=(25, 10, 10, 220), outline=(*RED_DARK, 180), width=1)
-    draw.text((ax, qy + 83), author, font=font_author, fill=(*RED_SOFT, 255))
+    ab = draw.textbbox((0, 0), author, font=font_author)
+    atw = ab[2] - ab[0]
+    ax = (W - 80 - atw) // 2
+    draw.rounded_rectangle([ax - 12, 135, ax + atw + 12, 157], radius=11, fill=(25, 10, 10, 220), outline=(*RED_DARK, 180), width=1)
+    draw.text((ax, 138), author, font=font_author, fill=(*RED_SOFT, 255))
 
-    # Floating particles
-    import random
-    random.seed(99)
-    for _ in range(30):
-        px, py = random.randint(0, W), random.randint(0, H)
-        pr = random.randint(1, 2)
-        pa = random.randint(30, 80)
-        draw.ellipse([px-pr, py-pr, px+pr, py+pr], fill=(*RED, pa))
+    # Pen/quill icon on the right — matching project banner style
+    ix, iy = W - 100, H // 2
+    # Pen body (angled)
+    draw.line([(ix-15, iy+25), (ix+15, iy-25)], fill=(*RED, 200), width=4)
+    draw.line([(ix-12, iy+22), (ix+12, iy-22)], fill=(*RED_SOFT, 150), width=2)
+    # Pen tip
+    draw.polygon([(ix-18, iy+30), (ix-15, iy+25), (ix-12, iy+28)], fill=(*RED, 220))
+    # Pen cap
+    draw.rounded_rectangle([ix+10, iy-30, ix+20, iy-20], radius=2, fill=(*RED, 200))
+    # Writing lines coming from pen
+    draw.line([(ix-30, iy+35), (ix-10, iy+35)], fill=(*RED_DARK, 120), width=1)
+    draw.line([(ix-35, iy+40), (ix-15, iy+40)], fill=(*RED_DARK, 80), width=1)
+    draw.line([(ix-28, iy+45), (ix-12, iy+45)], fill=(*RED_DARK, 50), width=1)
 
     img = img.convert("RGB")
     img.save("assets/footer_banner.png", "PNG", quality=95)
@@ -304,4 +275,3 @@ if __name__ == '__main__':
     create_wave_divider()
     create_footer_banner()
     print("Done")
-
