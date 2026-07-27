@@ -11,9 +11,7 @@
 
 <img src="assets/wave_divider.png" width="100%" />
 
-<p align="center">
-  <img src="assets/about_section.png" alt="About" width="100%" />
-</p>
+## ◈ About
 
 > AI Developer with **7 months of professional experience** building real-world AI solutions across two major production projects — **ExamBro** and **SKAIS** — spanning LLM applications, RAG pipelines, and conversational AI voice agents.
 
@@ -25,9 +23,7 @@
 
 <img src="assets/wave_divider.png" width="100%" />
 
-<p align="center">
-  <img src="assets/techstack_section.png" alt="Tech Stack" width="100%" />
-</p>
+## ◈ Tech Stack
 
 **🧠 Generative AI & LLMs**
 
@@ -59,9 +55,7 @@
 
 <img src="assets/wave_divider.png" width="100%" />
 
-<p align="center">
-  <img src="assets/projects_section.png" alt="Projects" width="100%" />
-</p>
+## ◈ Projects
 
 <p align="center">
   <img src="assets/skais_card.png" alt="SKAIS" width="100%" />
@@ -99,9 +93,7 @@
 
 <img src="assets/wave_divider.png" width="100%" />
 
-<p align="center">
-  <img src="assets/experience_section.png" alt="Experience" width="100%" />
-</p>
+## ◈ Experience
 
 > 🔴 **AI Developer** — *Cloudus Infotech, Surat, Gujarat*
 > 
@@ -117,18 +109,14 @@
 
 <img src="assets/wave_divider.png" width="100%" />
 
-<p align="center">
-  <img src="assets/education_section.png" alt="Education" width="100%" />
-</p>
+## ◈ Education
 
 - 🎓 **M.Sc. Artificial Intelligence** — Maharaja Krishnakumarsinhji Bhavnagar University (MKBU) · *2025 – Present*
 - 📘 **Bachelor of Computer Applications (BCA)** — Maharaja Krishnakumarsinhji Bhavnagar University (MKBU) · *2022 – 2025*
 
 <img src="assets/wave_divider.png" width="100%" />
 
-<p align="center">
-  <img src="assets/connect_section.png" alt="Connect" width="100%" />
-</p>
+## ◈ Connect
 
 <p align="center">
   <a href="https://linkedin.com/in/dhruv-mavani-b186b6283"><img src="https://img.shields.io/badge/LinkedIn-Connect-DC2626?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
