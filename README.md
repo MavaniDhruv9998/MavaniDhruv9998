@@ -53,11 +53,23 @@
   <img src="assets/skais_card.png" alt="SKAIS" width="100%" />
 </p>
 
+- ▸ Voice AI agent answering live phone orders & reservations
+- ▸ RAG knowledge base for menu, hours & policies
+- ▸ Auto SMS confirmations via Twilio SDK
+- ▸ 50%+ cost savings vs human operators
+- ▸ **Stack**: `Python` · `FastAPI` · `Retell AI` · `LangChain` · `Supabase` · `Twilio` · `Next.js`
+
 <br/>
 
 <p align="center">
   <img src="assets/exambro_card.png" alt="ExamBro" width="100%" />
 </p>
+
+- ▸ Extracts questions, options & diagrams from PDFs
+- ▸ Fixed critical diagram alignment displacement bug
+- ▸ Gemini AI auto-generates structured JSON answers
+- ▸ Docker deployed with multilingual support
+- ▸ **Stack**: `Python` · `Django` · `FastAPI` · `Mistral OCR` · `Gemini AI` · `PyMuPDF` · `Docker`
 
 <img src="assets/wave_divider.svg" width="100%" />
 

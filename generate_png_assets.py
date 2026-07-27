@@ -17,20 +17,70 @@ def get_font(size, bold=False):
 def lerp(c1, c2, t):
     return tuple(int(c1[i] + (c2[i] - c1[i]) * t) for i in range(3))
 
-# ── Colors ──
 BG = (6, 6, 8)
 RED = (220, 38, 38)
 RED_DARK = (130, 20, 20)
+RED_SOFT = (248, 113, 113)
 
-# ─────────────────────────────────────
-# HEADER — Name only, clean gradient
-# ─────────────────────────────────────
+
+def make_banner(name, icon_func, filename, W=1000, H=200):
+    """Shared banner style — same as header: name + one icon, clean gradient."""
+    img = Image.new("RGBA", (W, H), (*BG, 255))
+    draw = ImageDraw.Draw(img)
+
+    # Smooth red glow center
+    orb = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    od = ImageDraw.Draw(orb)
+    od.ellipse([W//4, 10, W*3//4, H-10], fill=(*RED_DARK, 35))
+    orb = orb.filter(ImageFilter.GaussianBlur(60))
+    img = Image.alpha_composite(img, orb)
+    draw = ImageDraw.Draw(img)
+
+    # Top & bottom red lines
+    draw.line([(0, 0), (W, 0)], fill=(*RED, 255), width=3)
+    draw.line([(0, H-3), (W, H-3)], fill=(*RED, 255), width=3)
+
+    # Name centered
+    font_name = get_font(50, bold=True)
+    bbox = draw.textbbox((0, 0), name, font=font_name)
+    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    tx = (W - tw) // 2
+    ty = (H - th) // 2
+
+    # Glow behind name
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    gd = ImageDraw.Draw(glow)
+    gd.text((tx, ty), name, font=font_name, fill=(*RED, 45))
+    glow = glow.filter(ImageFilter.GaussianBlur(16))
+    img = Image.alpha_composite(img, glow)
+    draw = ImageDraw.Draw(img)
+
+    # Name gradient text
+    cx = tx
+    for i, ch in enumerate(name):
+        t = i / max(1, len(name) - 1)
+        c = lerp(RED, RED_SOFT, t)
+        draw.text((cx, ty), ch, font=font_name, fill=(*c, 255))
+        cx += draw.textlength(ch, font=font_name)
+
+    # Draw icon on the right side
+    icon_func(draw, W, H)
+
+    img = img.convert("RGB")
+    img.save(f"assets/{filename}", "PNG", quality=95)
+    print(f"Created {filename}")
+
+
+# ─── HEADER ───
 def create_header():
+    def no_icon(draw, W, H):
+        pass
+    make_banner("DHRUV MAVANI", no_icon, "header_banner.png", W=1200, H=300)
+    # Re-make with bigger font
     W, H = 1200, 300
     img = Image.new("RGBA", (W, H), (*BG, 255))
     draw = ImageDraw.Draw(img)
 
-    # Simple smooth red glow in center — no grid, no particles
     orb = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     od = ImageDraw.Draw(orb)
     od.ellipse([300, 20, 900, 320], fill=(*RED_DARK, 40))
@@ -38,11 +88,9 @@ def create_header():
     img = Image.alpha_composite(img, orb)
     draw = ImageDraw.Draw(img)
 
-    # Top & bottom thin red line
     draw.line([(0, 0), (W, 0)], fill=(*RED, 255), width=3)
     draw.line([(0, H-3), (W, H-3)], fill=(*RED, 255), width=3)
 
-    # ── Name only ──
     font_name = get_font(90, bold=True)
     name = "DHRUV MAVANI"
     bbox = draw.textbbox((0, 0), name, font=font_name)
@@ -50,7 +98,6 @@ def create_header():
     tx = (W - tw) // 2
     ty = (H - th) // 2
 
-    # Soft glow behind
     glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     gd = ImageDraw.Draw(glow)
     gd.text((tx, ty), name, font=font_name, fill=(*RED, 50))
@@ -58,11 +105,10 @@ def create_header():
     img = Image.alpha_composite(img, glow)
     draw = ImageDraw.Draw(img)
 
-    # Name text — simple gradient red
     cx = tx
     for i, ch in enumerate(name):
         t = i / max(1, len(name) - 1)
-        c = lerp(RED, (248, 113, 113), t)
+        c = lerp(RED, RED_SOFT, t)
         draw.text((cx, ty), ch, font=font_name, fill=(*c, 255))
         cx += draw.textlength(ch, font=font_name)
 
@@ -70,9 +116,50 @@ def create_header():
     img.save("assets/header_banner.png", "PNG", quality=95)
     print("Created header_banner.png")
 
-# ─────────────────────────────────────
-# ANIMATED WAVE DIVIDER (SVG)
-# ─────────────────────────────────────
+
+# ─── SKAIS — phone icon ───
+def create_skais():
+    def phone_icon(draw, W, H):
+        # Simple phone/handset icon on the right
+        ix, iy = W - 120, H // 2
+        # Phone body
+        draw.rounded_rectangle([ix-20, iy-40, ix+20, iy+40], radius=8, fill=(*RED, 200))
+        # Screen area
+        draw.rounded_rectangle([ix-14, iy-32, ix+14, iy+20], radius=4, fill=(*BG, 240))
+        # Earpiece
+        draw.rounded_rectangle([ix-8, iy-28, ix+8, iy-22], radius=2, fill=(*RED_SOFT, 180))
+        # Home button
+        draw.ellipse([ix-5, iy+24, ix+5, iy+34], fill=(*RED_SOFT, 150))
+        # Sound waves from phone
+        for r in range(1, 4):
+            draw.arc([ix+20, iy-10*r, ix+20+15*r, iy+10*r], start=-60, end=60, fill=(*RED, 60 + r*30), width=2)
+
+    make_banner("SKAIS", phone_icon, "skais_card.png")
+    print("Created skais_card.png")
+
+
+# ─── EXAMBRO — document/PDF icon ───
+def create_exambro():
+    def doc_icon(draw, W, H):
+        # Simple document/page icon
+        ix, iy = W - 110, H // 2
+        # Page
+        draw.rounded_rectangle([ix-22, iy-38, ix+22, iy+38], radius=4, fill=(*RED, 200))
+        # Inner white area
+        draw.rounded_rectangle([ix-16, iy-32, ix+16, iy+32], radius=2, fill=(*BG, 240))
+        # Text lines
+        draw.line([(ix-10, iy-22), (ix+10, iy-22)], fill=(*RED_SOFT, 200), width=2)
+        draw.line([(ix-10, iy-14), (ix+6, iy-14)], fill=(*RED_SOFT, 150), width=2)
+        draw.line([(ix-10, iy-6), (ix+10, iy-6)], fill=(*RED_SOFT, 150), width=2)
+        # Magnifying glass over doc
+        draw.ellipse([ix+2, iy+4, ix+22, iy+24], outline=(*RED, 220), width=2)
+        draw.line([(ix+18, iy+22), (ix+28, iy+32)], fill=(*RED, 220), width=3)
+
+    make_banner("EXAMBRO", doc_icon, "exambro_card.png")
+    print("Created exambro_card.png")
+
+
+# ─── WAVE DIVIDER (animated SVG) ───
 def create_wave_divider():
     svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 40" width="100%">
   <defs>
@@ -100,9 +187,8 @@ def create_wave_divider():
         f.write(svg)
     print("Created wave_divider.svg")
 
-# ─────────────────────────────────────
-# QUOTE CARD — simple
-# ─────────────────────────────────────
+
+# ─── QUOTE CARD ───
 def create_quote():
     W, H = 1000, 100
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -121,117 +207,18 @@ def create_quote():
 
     draw.text((30, 25), '"Ever tried. Ever failed. No matter. Try again. Fail again. Fail better"', font=f_q, fill=(245, 245, 245, 240))
     draw.rounded_rectangle([30, 60, 170, 82], radius=11, fill=(25, 10, 10, 220), outline=(*RED_DARK, 180), width=1)
-    draw.text((44, 64), "— Samuel Beckett", font=f_a, fill=(248, 113, 113, 255))
+    draw.text((44, 64), "-- Samuel Beckett", font=f_a, fill=(*RED_SOFT, 255))
 
     img = img.convert("RGB")
     img.save("assets/quote_card.png", "PNG", quality=95)
     print("Created quote_card.png")
 
-# ─────────────────────────────────────
-# SKAIS CARD — clean
-# ─────────────────────────────────────
-def create_skais():
-    W, H = 1000, 220
-    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(img)
-
-    draw.rounded_rectangle([0, 0, W-1, H-1], radius=14, fill=(10, 10, 14, 250), outline=(*RED_DARK, 160), width=2)
-
-    # Top accent line
-    for x in range(3, W-3):
-        t = (x - 3) / (W - 6)
-        c = lerp(RED_DARK, RED, t)
-        draw.line([(x, 2), (x, 4)], fill=(*c, 255))
-
-    f_badge = get_font(10, bold=True)
-    f_title = get_font(22, bold=True)
-    f_bullet = get_font(13)
-    f_stack = get_font(10, bold=True)
-
-    draw.rounded_rectangle([25, 15, 155, 34], radius=10, fill=(25, 10, 10, 230), outline=(*RED, 180), width=1)
-    draw.text((37, 18), "VOICE AI PROJECT", font=f_badge, fill=(*RED, 255))
-
-    draw.text((25, 42), "SKAIS  —  Restaurant AI Agent", font=f_title, fill=(245, 245, 245, 255))
-
-    bullets = [
-        "Voice AI agent answering live phone orders & reservations",
-        "RAG knowledge base for menu, hours & policies",
-        "Auto SMS confirmations via Twilio SDK",
-        "50%+ cost savings vs human operators",
-    ]
-    by = 76
-    for b in bullets:
-        draw.text((35, by), "▸", font=f_bullet, fill=(*RED, 255))
-        draw.text((52, by), b, font=f_bullet, fill=(180, 180, 185, 255))
-        by += 22
-
-    draw.text((25, 185), "STACK:", font=f_stack, fill=(80, 80, 90, 255))
-    sx = 72
-    for s in ["Python", "FastAPI", "Retell AI", "LangChain", "Supabase", "Twilio", "Next.js"]:
-        sw = int(draw.textlength(s, font=f_stack)) + 12
-        draw.rounded_rectangle([sx, 182, sx+sw, 198], radius=4, fill=(25, 10, 10, 220))
-        draw.text((sx+6, 184), s, font=f_stack, fill=(248, 113, 113, 255))
-        sx += sw + 4
-
-    img = img.convert("RGB")
-    img.save("assets/skais_card.png", "PNG", quality=95)
-    print("Created skais_card.png")
-
-# ─────────────────────────────────────
-# EXAMBRO CARD — clean
-# ─────────────────────────────────────
-def create_exambro():
-    W, H = 1000, 220
-    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(img)
-
-    draw.rounded_rectangle([0, 0, W-1, H-1], radius=14, fill=(10, 10, 14, 250), outline=(*RED_DARK, 160), width=2)
-
-    for x in range(3, W-3):
-        t = (x - 3) / (W - 6)
-        c = lerp(RED, RED_DARK, t)
-        draw.line([(x, 2), (x, 4)], fill=(*c, 255))
-
-    f_badge = get_font(10, bold=True)
-    f_title = get_font(22, bold=True)
-    f_bullet = get_font(13)
-    f_stack = get_font(10, bold=True)
-
-    draw.rounded_rectangle([25, 15, 145, 34], radius=10, fill=(25, 10, 10, 230), outline=(*RED, 180), width=1)
-    draw.text((37, 18), "OCR AI PROJECT", font=f_badge, fill=(*RED, 255))
-
-    draw.text((25, 42), "ExamBro  —  OCR Exam Extraction", font=f_title, fill=(245, 245, 245, 255))
-
-    bullets = [
-        "Extracts questions, options & diagrams from PDFs",
-        "Fixed critical diagram alignment displacement bug",
-        "Gemini AI auto-generates structured JSON answers",
-        "Docker deployed with multilingual support",
-    ]
-    by = 76
-    for b in bullets:
-        draw.text((35, by), "▸", font=f_bullet, fill=(*RED, 255))
-        draw.text((52, by), b, font=f_bullet, fill=(180, 180, 185, 255))
-        by += 22
-
-    draw.text((25, 185), "STACK:", font=f_stack, fill=(80, 80, 90, 255))
-    sx = 72
-    for s in ["Python", "Django", "FastAPI", "Mistral OCR", "Gemini AI", "PyMuPDF", "Docker"]:
-        sw = int(draw.textlength(s, font=f_stack)) + 12
-        draw.rounded_rectangle([sx, 182, sx+sw, 198], radius=4, fill=(25, 10, 10, 220))
-        draw.text((sx+6, 184), s, font=f_stack, fill=(248, 113, 113, 255))
-        sx += sw + 4
-
-    img = img.convert("RGB")
-    img.save("assets/exambro_card.png", "PNG", quality=95)
-    print("Created exambro_card.png")
-
 
 if __name__ == '__main__':
     create_directory()
     create_header()
-    create_wave_divider()
-    create_quote()
     create_skais()
     create_exambro()
+    create_wave_divider()
+    create_quote()
     print("Done")
