@@ -9,7 +9,7 @@
   <a href="https://github.com/MavaniDhruv9998"><img src="https://img.shields.io/badge/-GitHub-1a1a1a?style=for-the-badge&logo=github&logoColor=DC2626" /></a>
 </p>
 
-<p align="center"><img src="assets/divider.png" width="100%" /></p>
+<img src="assets/wave_divider.svg" width="100%" />
 
 ## ◈ About
 
@@ -18,7 +18,7 @@
 - ⚡ Building **Voice AI Agents** · **RAG Pipelines** · **OCR Engines**
 - 📍 Gujarat, India
 
-<p align="center"><img src="assets/divider.png" width="100%" /></p>
+<img src="assets/wave_divider.svg" width="100%" />
 
 ## ◈ Tech Stack
 
@@ -45,7 +45,7 @@
   <img src="https://img.shields.io/badge/Git-1a1a1a?style=flat-square&logo=git&logoColor=DC2626" />
 </p>
 
-<p align="center"><img src="assets/divider.png" width="100%" /></p>
+<img src="assets/wave_divider.svg" width="100%" />
 
 ## ◈ Projects
 
@@ -59,7 +59,7 @@
   <img src="assets/exambro_card.png" alt="ExamBro" width="100%" />
 </p>
 
-<p align="center"><img src="assets/divider.png" width="100%" /></p>
+<img src="assets/wave_divider.svg" width="100%" />
 
 ## ◈ Experience
 
@@ -71,14 +71,14 @@
 - ▸ Built **high-precision OCR** engines
 - ▸ **Dockerized** & deployed to **AWS**
 
-<p align="center"><img src="assets/divider.png" width="100%" /></p>
+<img src="assets/wave_divider.svg" width="100%" />
 
 ## ◈ Education
 
 - 🎓 **M.Sc. Artificial Intelligence** — MKBU (2025 – Present)
 - 📘 **BCA** — MKBU (2022 – 2025)
 
-<p align="center"><img src="assets/divider.png" width="100%" /></p>
+<img src="assets/wave_divider.svg" width="100%" />
 
 ## ◈ Connect
 
@@ -88,10 +88,8 @@
   <a href="https://github.com/MavaniDhruv9998"><img src="https://img.shields.io/badge/GitHub-Follow-DC2626?style=for-the-badge&logo=github&logoColor=white" /></a>
 </p>
 
----
+<img src="assets/wave_divider.svg" width="100%" />
 
 <p align="center">
   <img src="assets/quote_card.png" alt="Quote" width="100%" />
 </p>
-
-<p align="center"><i>Samuel Beckett: "Ever tried. Ever failed. No matter. Try again. Fail again. Fail better"</i></p>
