@@ -25,71 +25,33 @@
 
 ## ◈ Tech Stack
 
-#### 🧠 Generative AI & LLMs
-<p>
-  <img src="https://img.shields.io/badge/Prompt_Engineering-DC2626?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenAI_API-1a1a1a?style=flat-square&logo=openai&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Gemini_API-1a1a1a?style=flat-square&logo=googlegemini&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Claude_API-1a1a1a?style=flat-square&logo=anthropic&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/HuggingFace-1a1a1a?style=flat-square&logo=huggingface&logoColor=DC2626" />
-</p>
+**🧠 Generative AI & LLMs**
 
-#### 🔗 RAG & Vector Search
-<p>
-  <img src="https://img.shields.io/badge/RAG_Pipelines-DC2626?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/FAISS-1a1a1a?style=flat-square&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Pinecone-1a1a1a?style=flat-square&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Embeddings-1a1a1a?style=flat-square&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Chunking_Strategies-1a1a1a?style=flat-square&logoColor=DC2626" />
-</p>
+![Prompt Engineering](https://img.shields.io/badge/Prompt_Engineering-DC2626?style=flat-square&logoColor=white) ![OpenAI](https://img.shields.io/badge/OpenAI_API-1a1a1a?style=flat-square&logo=openai&logoColor=DC2626) ![Gemini](https://img.shields.io/badge/Gemini_API-1a1a1a?style=flat-square&logo=googlegemini&logoColor=DC2626) ![Claude](https://img.shields.io/badge/Claude_API-1a1a1a?style=flat-square&logo=anthropic&logoColor=DC2626) ![HuggingFace](https://img.shields.io/badge/HuggingFace-1a1a1a?style=flat-square&logo=huggingface&logoColor=DC2626)
 
-#### 🤖 AI Agents & Orchestration
-<p>
-  <img src="https://img.shields.io/badge/LangChain-1a1a1a?style=flat-square&logo=chainlink&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/LangGraph-1a1a1a?style=flat-square&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Google_ADK-DC2626?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/MCP-1a1a1a?style=flat-square&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Tool_Calling-1a1a1a?style=flat-square&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Multi--Agent-DC2626?style=flat-square&logoColor=white" />
-</p>
+**🔗 RAG & Vector Search**
 
-#### 💻 Programming & Backend
-<p>
-  <img src="https://img.shields.io/badge/Python-1a1a1a?style=flat-square&logo=python&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/FastAPI-1a1a1a?style=flat-square&logo=fastapi&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Django-1a1a1a?style=flat-square&logo=django&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/REST_APIs-DC2626?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/Pandas-1a1a1a?style=flat-square&logo=pandas&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/NumPy-1a1a1a?style=flat-square&logo=numpy&logoColor=DC2626" />
-</p>
+![RAG](https://img.shields.io/badge/RAG_Pipelines-DC2626?style=flat-square&logoColor=white) ![FAISS](https://img.shields.io/badge/FAISS-1a1a1a?style=flat-square&logoColor=DC2626) ![Pinecone](https://img.shields.io/badge/Pinecone-1a1a1a?style=flat-square&logoColor=DC2626) ![Embeddings](https://img.shields.io/badge/Embeddings-1a1a1a?style=flat-square&logoColor=DC2626) ![Chunking](https://img.shields.io/badge/Chunking_Strategies-1a1a1a?style=flat-square&logoColor=DC2626)
 
-#### 🗄️ Databases
-<p>
-  <img src="https://img.shields.io/badge/PostgreSQL-1a1a1a?style=flat-square&logo=postgresql&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Supabase-1a1a1a?style=flat-square&logo=supabase&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/MongoDB-1a1a1a?style=flat-square&logo=mongodb&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/MySQL-1a1a1a?style=flat-square&logo=mysql&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/SQLite-1a1a1a?style=flat-square&logo=sqlite&logoColor=DC2626" />
-</p>
+**🤖 AI Agents & Orchestration**
 
-#### ☁️ Cloud & DevOps
-<p>
-  <img src="https://img.shields.io/badge/AWS-1a1a1a?style=flat-square&logo=amazon-aws&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Docker-1a1a1a?style=flat-square&logo=docker&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Git-1a1a1a?style=flat-square&logo=git&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/GitHub-1a1a1a?style=flat-square&logo=github&logoColor=DC2626" />
-</p>
+![LangChain](https://img.shields.io/badge/LangChain-1a1a1a?style=flat-square&logo=chainlink&logoColor=DC2626) ![LangGraph](https://img.shields.io/badge/LangGraph-1a1a1a?style=flat-square&logoColor=DC2626) ![Google ADK](https://img.shields.io/badge/Google_ADK-DC2626?style=flat-square&logoColor=white) ![MCP](https://img.shields.io/badge/MCP-1a1a1a?style=flat-square&logoColor=DC2626) ![Tool Calling](https://img.shields.io/badge/Tool_Calling-1a1a1a?style=flat-square&logoColor=DC2626) ![Multi-Agent](https://img.shields.io/badge/Multi--Agent-DC2626?style=flat-square&logoColor=white)
 
-#### 🛠️ AI & Dev Tools
-<p>
-  <img src="https://img.shields.io/badge/Mistral_OCR-DC2626?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/PyTorch-1a1a1a?style=flat-square&logo=pytorch&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/OpenCV-1a1a1a?style=flat-square&logo=opencv&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Scikit--learn-1a1a1a?style=flat-square&logo=scikit-learn&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/PyMuPDF-1a1a1a?style=flat-square&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Cursor_AI-1a1a1a?style=flat-square&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Claude_Code-1a1a1a?style=flat-square&logoColor=DC2626" />
-</p>
+**💻 Programming & Backend**
+
+![Python](https://img.shields.io/badge/Python-1a1a1a?style=flat-square&logo=python&logoColor=DC2626) ![FastAPI](https://img.shields.io/badge/FastAPI-1a1a1a?style=flat-square&logo=fastapi&logoColor=DC2626) ![Django](https://img.shields.io/badge/Django-1a1a1a?style=flat-square&logo=django&logoColor=DC2626) ![REST APIs](https://img.shields.io/badge/REST_APIs-DC2626?style=flat-square&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-1a1a1a?style=flat-square&logo=pandas&logoColor=DC2626) ![NumPy](https://img.shields.io/badge/NumPy-1a1a1a?style=flat-square&logo=numpy&logoColor=DC2626)
+
+**🗄️ Databases**
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1a1a1a?style=flat-square&logo=postgresql&logoColor=DC2626) ![Supabase](https://img.shields.io/badge/Supabase-1a1a1a?style=flat-square&logo=supabase&logoColor=DC2626) ![MongoDB](https://img.shields.io/badge/MongoDB-1a1a1a?style=flat-square&logo=mongodb&logoColor=DC2626) ![MySQL](https://img.shields.io/badge/MySQL-1a1a1a?style=flat-square&logo=mysql&logoColor=DC2626) ![SQLite](https://img.shields.io/badge/SQLite-1a1a1a?style=flat-square&logo=sqlite&logoColor=DC2626)
+
+**☁️ Cloud & DevOps**
+
+![AWS](https://img.shields.io/badge/AWS-1a1a1a?style=flat-square&logo=amazon-aws&logoColor=DC2626) ![Docker](https://img.shields.io/badge/Docker-1a1a1a?style=flat-square&logo=docker&logoColor=DC2626) ![Git](https://img.shields.io/badge/Git-1a1a1a?style=flat-square&logo=git&logoColor=DC2626) ![GitHub](https://img.shields.io/badge/GitHub-1a1a1a?style=flat-square&logo=github&logoColor=DC2626)
+
+**🛠️ AI & Dev Tools**
+
+![Mistral OCR](https://img.shields.io/badge/Mistral_OCR-DC2626?style=flat-square&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-1a1a1a?style=flat-square&logo=pytorch&logoColor=DC2626) ![OpenCV](https://img.shields.io/badge/OpenCV-1a1a1a?style=flat-square&logo=opencv&logoColor=DC2626) ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1a1a1a?style=flat-square&logo=scikit-learn&logoColor=DC2626) ![PyMuPDF](https://img.shields.io/badge/PyMuPDF-1a1a1a?style=flat-square&logoColor=DC2626) ![Cursor AI](https://img.shields.io/badge/Cursor_AI-1a1a1a?style=flat-square&logoColor=DC2626)
 
 ---
 
@@ -110,7 +72,7 @@
 - 🤖 Built a companion **support chatbot** (LangChain) for the SaaS platform
 - 📊 Handled **103+ live calls** in production at ~**$1,000–$1,500/mo** vs **$2,000–$3,000/mo** for human operators
 
-**Stack**: `Python` · `FastAPI` · `Retell AI SDK` · `Next.js` · `Supabase` · `Gemini AI` · `LangChain` · `Twilio SDK` · `Square POS`
+`Python` `FastAPI` `Retell AI SDK` `Next.js` `Supabase` `Gemini AI` `LangChain` `Twilio SDK` `Square POS`
 
 ---
 
@@ -127,7 +89,7 @@
 - 🤖 Used **Gemini AI via LangChain** to convert raw OCR output into **structured JSON** and auto-fill missing answers
 - 🐳 Deployed in **Docker containers** with **multilingual translation** support + bulk question management in admin dashboard
 
-**Stack**: `Python` · `Django` · `FastAPI` · `PyMuPDF` · `Mistral OCR` · `OpenCV` · `Gemini AI` · `Supabase`
+`Python` `Django` `FastAPI` `PyMuPDF` `Mistral OCR` `OpenCV` `Gemini AI` `Supabase`
 
 ---
 
