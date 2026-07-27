@@ -9,104 +9,150 @@
   <a href="https://github.com/MavaniDhruv9998"><img src="https://img.shields.io/badge/-GitHub-1a1a1a?style=for-the-badge&logo=github&logoColor=DC2626" /></a>
 </p>
 
-<img src="assets/wave_divider.png" width="100%" />
+---
 
 ## ◈ About
 
-- 🔴 **AI Developer** · 7 months production experience at *Cloudus Infotech*
-- 🎓 **M.Sc. Artificial Intelligence** (MKBU) · BCA Graduate
-- ⚡ Building **Voice AI Agents** · **RAG Pipelines** · **OCR Engines**
-- 📍 Gujarat, India
+> AI Developer with **7 months of professional experience** building real-world AI solutions across two major production projects — **ExamBro** and **SKAIS** — spanning LLM applications, RAG pipelines, and conversational AI voice agents.
 
-<img src="assets/wave_divider.png" width="100%" />
+- 🔴 **AI Developer** at *Cloudus Infotech, Surat* — 7 months production experience
+- 🎓 **M.Sc. Artificial Intelligence** (MKBU) — Currently pursuing
+- 📘 **BCA** Graduate — Maharaja Krishnakumarsinhji Bhavnagar University (2022–2025)
+- ⚡ Building **Voice AI Agents** · **RAG Pipelines** · **OCR Engines** · **Multi-Agent Workflows**
+- 📍 Bhavnagar, Gujarat, India
+
+---
 
 ## ◈ Tech Stack
 
-<p align="center">
+#### 🧠 Generative AI & LLMs
+<p>
+  <img src="https://img.shields.io/badge/Prompt_Engineering-DC2626?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenAI_API-1a1a1a?style=flat-square&logo=openai&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Gemini_API-1a1a1a?style=flat-square&logo=googlegemini&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Claude_API-1a1a1a?style=flat-square&logo=anthropic&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/HuggingFace-1a1a1a?style=flat-square&logo=huggingface&logoColor=DC2626" />
+</p>
+
+#### 🔗 RAG & Vector Search
+<p>
+  <img src="https://img.shields.io/badge/RAG_Pipelines-DC2626?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/FAISS-1a1a1a?style=flat-square&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Pinecone-1a1a1a?style=flat-square&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Embeddings-1a1a1a?style=flat-square&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Chunking_Strategies-1a1a1a?style=flat-square&logoColor=DC2626" />
+</p>
+
+#### 🤖 AI Agents & Orchestration
+<p>
+  <img src="https://img.shields.io/badge/LangChain-1a1a1a?style=flat-square&logo=chainlink&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/LangGraph-1a1a1a?style=flat-square&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Google_ADK-DC2626?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/MCP-1a1a1a?style=flat-square&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Tool_Calling-1a1a1a?style=flat-square&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Multi--Agent-DC2626?style=flat-square&logoColor=white" />
+</p>
+
+#### 💻 Programming & Backend
+<p>
   <img src="https://img.shields.io/badge/Python-1a1a1a?style=flat-square&logo=python&logoColor=DC2626" />
   <img src="https://img.shields.io/badge/FastAPI-1a1a1a?style=flat-square&logo=fastapi&logoColor=DC2626" />
   <img src="https://img.shields.io/badge/Django-1a1a1a?style=flat-square&logo=django&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/LangChain-1a1a1a?style=flat-square&logo=chainlink&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/OpenAI-1a1a1a?style=flat-square&logo=openai&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Gemini-1a1a1a?style=flat-square&logo=googlegemini&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Claude-1a1a1a?style=flat-square&logo=anthropic&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/HuggingFace-1a1a1a?style=flat-square&logo=huggingface&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/RAG-DC2626?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/FAISS-1a1a1a?style=flat-square&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Pinecone-1a1a1a?style=flat-square&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/OCR-DC2626?style=flat-square&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenCV-1a1a1a?style=flat-square&logo=opencv&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/PyTorch-1a1a1a?style=flat-square&logo=pytorch&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/REST_APIs-DC2626?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-1a1a1a?style=flat-square&logo=pandas&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/NumPy-1a1a1a?style=flat-square&logo=numpy&logoColor=DC2626" />
+</p>
+
+#### 🗄️ Databases
+<p>
   <img src="https://img.shields.io/badge/PostgreSQL-1a1a1a?style=flat-square&logo=postgresql&logoColor=DC2626" />
   <img src="https://img.shields.io/badge/Supabase-1a1a1a?style=flat-square&logo=supabase&logoColor=DC2626" />
   <img src="https://img.shields.io/badge/MongoDB-1a1a1a?style=flat-square&logo=mongodb&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/MySQL-1a1a1a?style=flat-square&logo=mysql&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/SQLite-1a1a1a?style=flat-square&logo=sqlite&logoColor=DC2626" />
+</p>
+
+#### ☁️ Cloud & DevOps
+<p>
   <img src="https://img.shields.io/badge/AWS-1a1a1a?style=flat-square&logo=amazon-aws&logoColor=DC2626" />
   <img src="https://img.shields.io/badge/Docker-1a1a1a?style=flat-square&logo=docker&logoColor=DC2626" />
   <img src="https://img.shields.io/badge/Git-1a1a1a?style=flat-square&logo=git&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/GitHub-1a1a1a?style=flat-square&logo=github&logoColor=DC2626" />
 </p>
 
-<img src="assets/wave_divider.png" width="100%" />
+#### 🛠️ AI & Dev Tools
+<p>
+  <img src="https://img.shields.io/badge/Mistral_OCR-DC2626?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyTorch-1a1a1a?style=flat-square&logo=pytorch&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/OpenCV-1a1a1a?style=flat-square&logo=opencv&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Scikit--learn-1a1a1a?style=flat-square&logo=scikit-learn&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/PyMuPDF-1a1a1a?style=flat-square&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Cursor_AI-1a1a1a?style=flat-square&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Claude_Code-1a1a1a?style=flat-square&logoColor=DC2626" />
+</p>
+
+---
 
 ## ◈ Projects
 
+<p align="center">
+  <img src="assets/skais_card.png" alt="SKAIS" width="100%" />
+</p>
+
+### 🔴 SKAIS — AI-Powered Restaurant Order Management System
+
+> **Problem:** Restaurants relied on staff to answer every phone call for orders and reservations — missed calls during busy hours and ongoing staffing cost.
+
+- 📞 Built a **voice AI agent** (Retell AI SDK) that answers the restaurant's phone line, shares menu items, prices & availability, and takes full orders/reservations **without a human on the call**
+- 🧠 Connected agent to a **RAG knowledge base** with restaurant-specific details (location, hours, policies) for accurate customer answers
+- 💰 Built **live price & prep-time calculation** into the call flow + automatic **SMS confirmation** via Twilio SDK
+- ⚙️ Gave owners a **settings page** to adjust reservation rules & agent behavior without code changes
+- 🤖 Built a companion **support chatbot** (LangChain) for the SaaS platform
+- 📊 Handled **103+ live calls** in production at ~**$1,000–$1,500/mo** vs **$2,000–$3,000/mo** for human operators
+
+**Stack**: `Python` · `FastAPI` · `Retell AI SDK` · `Next.js` · `Supabase` · `Gemini AI` · `LangChain` · `Twilio SDK` · `Square POS`
+
 ---
 
 <p align="center">
-  <img src="assets/skais_card.png" alt="SKAIS — Voice AI Restaurant Agent" width="100%" />
+  <img src="assets/exambro_card.png" alt="ExamBro" width="100%" />
 </p>
 
-### 🔴 SKAIS — Voice AI Restaurant Agent
+### 🔴 ExamBro — Question Extraction & Exam Management System
 
-> Autonomous voice AI agent that handles live phone calls for restaurant ordering, reservations & customer support — replacing human operators and cutting costs by 50%+.
+> **Problem:** Teachers were manually typing every exam question, answer, and diagram into the student portal — slow and error-prone.
 
-| | Highlights |
-|---|---|
-| 📞 | Voice AI agent answering live phone orders & reservations |
-| 🧠 | RAG knowledge base for menu, hours & policies |
-| 💬 | Auto SMS confirmations via Twilio SDK |
-| 💰 | 50%+ cost savings vs human operators |
+- 📄 Built an **OCR pipeline** (Mistral OCR) that pulls questions, answers, solutions, diagrams & options straight out of **any PDF** — removing manual entry entirely
+- 🔧 Fixed a recurring bug where **diagram positions were shifting** out of alignment with their questions during extraction
+- 🤖 Used **Gemini AI via LangChain** to convert raw OCR output into **structured JSON** and auto-fill missing answers
+- 🐳 Deployed in **Docker containers** with **multilingual translation** support + bulk question management in admin dashboard
 
-**Stack**: `Python` · `FastAPI` · `Retell AI` · `LangChain` · `Supabase` · `Twilio` · `Next.js`
+**Stack**: `Python` · `Django` · `FastAPI` · `PyMuPDF` · `Mistral OCR` · `OpenCV` · `Gemini AI` · `Supabase`
 
 ---
-
-<p align="center">
-  <img src="assets/exambro_card.png" alt="ExamBro — AI OCR Exam Engine" width="100%" />
-</p>
-
-### 🔴 ExamBro — AI OCR Exam Engine
-
-> Intelligent OCR pipeline that extracts questions, options & diagrams from exam PDFs and auto-generates structured JSON answers using Gemini AI.
-
-| | Highlights |
-|---|---|
-| 📄 | Extracts questions, options & diagrams from PDFs |
-| 🔧 | Fixed critical diagram alignment displacement bug |
-| 🤖 | Gemini AI auto-generates structured JSON answers |
-| 🐳 | Docker deployed with multilingual support |
-
-**Stack**: `Python` · `Django` · `FastAPI` · `Mistral OCR` · `Gemini AI` · `PyMuPDF` · `Docker`
-
-<img src="assets/wave_divider.png" width="100%" />
 
 ## ◈ Experience
 
-> **AI Developer** — *Cloudus Infotech, Surat* (Dec 2025 – Jun 2026)
+> 🔴 **AI Developer** — *Cloudus Infotech, Surat, Gujarat*
+> 
+> 📅 Dec 2025 – Jun 2026 · **7 months**
 
-- ▸ Deployed **Voice AI phone agents** handling live production calls
-- ▸ Eliminated **LLM hallucinations** via prompt refactoring
-- ▸ Architected **enterprise RAG** knowledge bases
-- ▸ Built **high-precision OCR** engines
-- ▸ **Dockerized** & deployed to **AWS**
+- 📞 Built a **voice AI agent** using Retell AI SDK that answers live customer calls — sharing menu items, prices, availability and taking full orders/reservations without staff
+- 🧠 Fixed early **hallucination problems** by rewriting/fine-tuning prompts and tightening guardrails until responses held up reliably across real calls
+- 🔗 Connected agent to a **RAG knowledge base** pulling restaurant-specific answers from uploaded documents instead of hardcoded scripts
+- ⚙️ Built the backend (**FastAPI, Supabase**) logging full call transcripts & customer details, with **Twilio SDK** auto SMS confirmations
+- 📄 Built an **OCR pipeline** (Django, FastAPI, PyMuPDF, Mistral OCR, Gemini AI) that extracts questions, answers & diagrams from any PDF format — including fixing a diagram-alignment bug
+- ☁️ **Deployed & hosted** production backend on **AWS**, resolving environment and configuration issues
+- 🔄 Used **Git/GitHub** throughout — worked across the full lifecycle: requirement analysis → system design → implementation → testing → deployment
 
-<img src="assets/wave_divider.png" width="100%" />
+---
 
 ## ◈ Education
 
-- 🎓 **M.Sc. Artificial Intelligence** — MKBU (2025 – Present)
-- 📘 **BCA** — MKBU (2022 – 2025)
+- 🎓 **M.Sc. Artificial Intelligence** — Maharaja Krishnakumarsinhji Bhavnagar University (MKBU) · *2025 – Present*
+- 📘 **Bachelor of Computer Applications (BCA)** — Maharaja Krishnakumarsinhji Bhavnagar University (MKBU) · *2022 – 2025*
 
-<img src="assets/wave_divider.png" width="100%" />
+---
 
 ## ◈ Connect
 
@@ -116,8 +162,8 @@
   <a href="https://github.com/MavaniDhruv9998"><img src="https://img.shields.io/badge/GitHub-Follow-DC2626?style=for-the-badge&logo=github&logoColor=white" /></a>
 </p>
 
-<img src="assets/wave_divider.png" width="100%" />
+---
 
 <p align="center">
-  <img src="assets/footer_banner.png" alt="Footer" width="100%" />
+  <img src="assets/footer_banner.png" alt="Let's Build Something" width="100%" />
 </p>
